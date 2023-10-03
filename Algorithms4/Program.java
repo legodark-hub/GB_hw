@@ -31,7 +31,9 @@ public class Program {
         oldValue = hashMap.put("+79001112239", "GGGGG3");
         oldValue = hashMap.put("+79001112230", "GGGGG4");
 
-        System.out.println(hashMap);
+        //System.out.println(hashMap);
+
+        System.out.println(hashMap.toString());
 
 
     }

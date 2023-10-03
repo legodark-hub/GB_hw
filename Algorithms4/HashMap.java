@@ -9,6 +9,29 @@ public class HashMap <K, V> {
 
     //region Публичные методы
 
+    // Необходимо доработать структуру класса HashMap, реализованную на семинаре.
+    // У нас появился метод добавления элементов, каким образом я могу распечатать все элементы структуры на экране?
+
+    //начало решения
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Bucket<K, V> bucket : buckets) {
+            if (bucket != null) {
+                Bucket.Node currentNode = bucket.head;
+                while (currentNode != null) {
+                    sb.append("Key: ").append(currentNode.value.key)
+                      .append(", Value: ").append(currentNode.value.value)
+                      .append("\n");
+                    currentNode = currentNode.next;
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    //конец решения
+
     public V put(K key, V value){
         if (buckets.length * LOAD_FACTOR <= size)
             recalculate();

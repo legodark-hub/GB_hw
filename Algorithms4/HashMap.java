@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson4;
+package Algorithms4;
 
 /**
  * Структура хэш-таблицы
